@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+    
+    <context:component-scan base-package="org.gurjinder.accountApplication" />
+    
+    <mvc:annotation-driven />
+    
+ 
+    <bean id="viewResolver"
+    	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix">
+            <value>/WEB-INF/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+    
+    
+    <bean id="address" class="org.gurjinder.accountApplication.CustomerAddress">
+    	<property name="streetName" value="3750 Parmenter St"/>
+    	<property name="city" value="Middleton"/>
+    	<property name="state" value="Wisconsin"/>
+    	<property name="zipCode" value="53562"/>
+    </bean>
+ 
+</beans>
+
