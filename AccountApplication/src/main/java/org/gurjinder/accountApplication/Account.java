@@ -3,6 +3,7 @@ package org.gurjinder.accountApplication;
 public abstract class Account {
 	
 	private double amount;
+	private double amount2;
 	
 	public double getAmount() {
 		return amount;
